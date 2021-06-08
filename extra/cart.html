@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel = "icon" href = "../logos/logo2.png" type = "image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <header id = "header">
+        <div id="left-header">
+            
+            <div id = "top-left">
+                <p id = "home"><a class = "top-left-links" href="">Home</a></p>
+                <p id = "about"><a class = "top-left-links" href="">About</a></p>
+                <p id = "contact"><a class = "top-left-links" href="">Contact</a></p>
+            </div>
+
+            <div id = "bottom-left">
+                <label for="">Email:</label>
+                <input type="email">
+                <button>Subscribe</button>
+            </div>
+
+        </div>
+
+        <div id="center-header">
+            <div id = "top-center">
+                <img id = "logo" src="../Logos/logo.png"  alt="Logo">
+            </div>
+
+            <div id = "bottom-center">
+               
+                <p class = "cats"><a class = "top-left-links" href="">New</a></p>
+                <p class = "cats"><a class = "top-left-links" href="">Adidas</a></p>
+                <p class = "cats"><a class = "top-left-links" href="">Nike</a></p>
+                <p class = "cats"><a class = "top-left-links" href="">Puma</a></p>
+                <p class = "cats"><a class = "top-left-links" href="">Others</a></p>
+
+            </div>
+
+        </div>
+
+        <div id = "right-header">
+            <div id = "top-right">
+
+                <p class = "cats"><a class = "top-left-links" href="">Sign in</a></p>
+                <p class = "cats"><a class = "top-left-links" href="">Register</a></p>
+                <p class = "cats"><a class = "top-left-links" href=""><i class="fa fa-shopping-cart"></i></a></p>
+
+            </div>
+
+            <div id = "bottom-right">
+
+                <input type="search" placeholder="Search Product">
+                <button>Search</button>
+            
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <a href="Selected-Product.html"><i class="fa fa-chevron-circle-left">Back to Product</i></a>
+
+    <div id = "first-div">
+       
+        <div id = "items-summary"> 
+            <h3 id = "my-cart-header">My Cart</h3>
+
+            <table>
+               <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+                <tr>
+                    <td> <h4> Adidas vipero neat cleat</h4>Color: <i>blue</i><br>Size: <i>43</i></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td><h4> Nike Mercurial 360 </h4>Color: <i>white</i><br>Size: <i>43</i> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><h4> Puma Retro 3365 XE </h4>Color: <i>black</i><br>Size: <i>43</i></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+        <div id = "order-summary">
+            <div class = "order-summary-head">
+               <h3 id = "my-cart-header"> Order Summary</h3>
+               <p id = "item-number">4 items</p>
+            </div>
+
+            <div class = "order-summary-body">
+                <ul id = "info">
+                    <li class = "info">Subtotal</li>
+                    <li class = "info">Delivery Cost</li>
+                    <li class = "info">Coupon Discount</li>
+                    <hr>
+                    <li class = "info">GRAND TOTAL</li>
+                </ul>
+
+                <ul id = "info-cost">
+                    <li class = "info-cost">¢150</li>
+                    <li class = "info-cost">¢15</li>
+                    <li class = "info-cost">-¢50</li>
+                    <hr>
+                    <li class = "info-cost">¢115</li>
+                </ul>
+
+            </div>
+
+            <input type="text" id = "promo-code" placeholder="Enter Promo Code(50% Discount)">
+            <button id="apply">Apply</button>
+            <button id="checkout">CHECKOUT</button>
+        </div>
+
+    </div>
+
+    
+
+    <footer>
+
+        
+    </footer>
+</body>
+</html>
