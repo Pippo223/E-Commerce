@@ -87,7 +87,7 @@
         
         <div id="pprice">$180</div>
         
-        <p> Color: <i></i></p>
+        <p> Color: <i id= "color-text">Yellow</i></p>
         
         <div id = "color">
             <div class = "color" id = "color1" onclick="changeToYellow()"></div>
@@ -99,12 +99,12 @@
 
         <div id = "size">
             <label for="">Size:</label>
-            <br>
-            <div class = "size" id ="size1" tabindex="1">41</div>
-            <div class = "size" id ="size2" tabindex="2">42</div>
-            <div class = "size" id ="size3" tabindex="3">43</div>
-            <div class = "size" id ="size4" tabindex="4">44</div>
-            <div class = "size" id ="size5" tabindex="5">45</div>
+            <br>           
+            <div class = "size" id ="size1" tabindex="1" onclick="getSize41()">41</div>
+            <div class = "size" id ="size2" tabindex="2" onclick="getSize42()">42</div>
+            <div class = "size" id ="size3" tabindex="3" onclick="getSize43()">43</div>
+            <div class = "size" id ="size4" tabindex="4" onclick="getSize44()">44</div>
+            <div class = "size" id ="size5" tabindex="5" onclick="getSize45()">45</div>
         </div>
 
         <div class = "qty">
@@ -121,6 +121,51 @@
         </div>
 
     </div>
+
+<div id = "myModal" class="modal">
+
+    <div class="modal-content">
+     
+      <header id= "modal-head">
+          <h3 class="head-text">Item added to Cart</h3>
+          <span class="close">&times;</span>
+
+      </header>
+      <div id = "modal-top">
+        <div class="modal-top">
+            <img src="" id="summary-image" alt="Summary-Product-Image">
+        </div>
+        <div class="modal-top">
+            <p id="summary-pname"></p>
+            <p id="summary-pprice">p</p>
+            <p id="summary-pcolor">c</p>
+            <p id="summary-psize">s</p>
+            <p id="summary-pqty">q</p>
+
+        </div>
+      </div>
+      <hr>
+      <div id="total-in-bag">
+         Items in bag = 1
+     </div>
+        <hr>
+      <div id="sub-total-div">
+        <p>CART SUBTOTAL:</p>  
+        <p id="sub-total">$180.00</p>
+      </div>
+      <hr>
+      <div>
+          <button id="checkout">CHECKOUT</button>
+          <button id="continue-shopping">CONTINUE SHOPPING</button>
+      </div>
+
+
+    </div>
+  
+  </div>>
+
+
+</div>
 
 </div>
 

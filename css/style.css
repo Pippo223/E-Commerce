@@ -6,7 +6,7 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header {
+#header {
     background-color:gold;
     width:100%;
     display: grid;
@@ -192,7 +192,7 @@ footer {
 }
 
 #color1 {
-    background-color: rgb(208, 255, 0);
+    background-color: rgb(238, 255, 0);
 }
 
 #color2 {
@@ -266,6 +266,96 @@ button[id=add-to-cart] {
 button:hover, .color:hover, .size:hover {
     cursor: pointer;
     box-shadow: 0.1em 0em 0.2em 0.1em gold;
+}
+
+#myModal {
+    display: none; 
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    right:1%;
+    top:5%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    float: right;
+    background-color: aliceblue; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+
+#modal-head {
+    display: flex;
+    background-color: #002b5c;
+    color:white;
+    height: 3em;
+}
+
+span.close {
+     margin-top: 1.5%;
+     font-size: 1.2em;
+}
+
+span.close:hover {
+    cursor:pointer;
+}
+
+.head-text {
+    font-size: 1.2rem;
+   margin: auto;
+}
+
+#modal-top {
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2%;
+}
+
+.modal-top {
+    height: 14em;
+    padding-left: 5%;
+    background-color:white;
+}
+
+#summary-image {
+    width:100%;
+}
+
+#total-in-bag {
+    width: 88%;
+    margin: auto;
+    background-color: white;
+    padding:2%;
+}
+
+#sub-total-div {
+    display:flex;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding-left: 2%;
+}
+
+#sub-total{
+    margin-left: 50%;
 }
 
 /*fa fa icons*/
@@ -390,18 +480,33 @@ button[id=apply] {
 button[id=checkout] {
     width:90%;
     margin:auto;
-    margin-top: 10%;
+    margin-top: 5%;
     height: 2.5em;
-    margin-left: 0.6em;
+    margin-left: 1em;
     background-color:crimson;
     color: white;
     font-size: 1.2em;
     font-weight: bold;
     border:0;
-    box-shadow: 0.1em 0em 0.1em 0.1em  gold;
-    border-radius: 0.2em;
 }
 
+button[id=continue-shopping] {
+    width:90%;
+    margin:auto;
+    margin-top:2%;
+    height: 2.5em;
+    margin-left: 1em;
+    background-color:white;
+    color:#002b5c;
+    font-size: 1.2em;
+    font-weight: bold;
+    border:1px solid #002b5c;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0.1em 0em 0.1em 0.1em  gold;
+}
 
 
 
