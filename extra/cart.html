@@ -8,6 +8,7 @@
     <link rel = "icon" href = "../logos/logo2.png" type = "image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="../css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,7 +70,7 @@
     </header>
 
 
-    <a href="Selected-Product.html"><i class="fa fa-chevron-circle-left">Back to Product</i></a>
+    <a href="../index.html"><i class="fa fa-chevron-circle-left">Back to Product</i></a>
 
     <div id = "first-div">
        
@@ -82,25 +83,24 @@
                     <th>Quantity</th>
                     <th>Unit Price</th>
                     <th>Total Price</th>
+                    <th></th>
                 </tr>
                 <tr>
-                    <td> <h4> Adidas vipero neat cleat</h4>Color: <i>blue</i><br>Size: <i>43</i></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td> 
+                        <h4 id="name-col"> </h4>
+                         <i id ="color-col"></i><br>
+                         <i id = "size-col"></i>
+                        </td>
+                    <td>
+                        <i class="fa fa-minus" onclick="decrementValue()"></i>
+                        <span id="qty-col"></span>
+                        <i class="fa fa-plus" onclick="incrementValue()"></i>
+
+                    </td>
+                    <td><h5 id = "uprice-col"></h5></td>
+                    <td><h5 id = "tprice-col"></h5></td>
+                    <td><span id="delete-icon">&#10060;</span></td>
                     
-                </tr>
-                <tr>
-                    <td><h4> Nike Mercurial 360 </h4>Color: <i>white</i><br>Size: <i>43</i> </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><h4> Puma Retro 3365 XE </h4>Color: <i>black</i><br>Size: <i>43</i></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                 </tr>
 
 
@@ -111,40 +111,75 @@
         <div id = "order-summary">
             <div class = "order-summary-head">
                <h3 id = "my-cart-header"> Order Summary</h3>
-               <p id = "item-number">4 items</p>
+               <p id = "item-number">1 items</p>
             </div>
 
             <div class = "order-summary-body">
                 <ul id = "info">
                     <li class = "info">Subtotal</li>
-                    <li class = "info">Delivery Cost</li>
                     <li class = "info">Coupon Discount</li>
-                    <hr>
-                    <li class = "info">GRAND TOTAL</li>
+                    <li class = "info">Delivery Cost</li>        
                 </ul>
 
+
                 <ul id = "info-cost">
-                    <li class = "info-cost">¢150</li>
-                    <li class = "info-cost">¢15</li>
-                    <li class = "info-cost">-¢50</li>
-                    <hr>
-                    <li class = "info-cost">¢115</li>
+                    <li id = "subtotal" class = "info-cost"></li>
+                    <li id = "discount" class = "info-cost">None</li>
+                    <li id = "delivery" class = "info-cost">$10</li>
+                
                 </ul>
 
             </div>
+            <hr>
 
-            <input type="text" id = "promo-code" placeholder="Enter Promo Code(50% Discount)">
+            <div class = "order-summary-body">
+                <ul id = "info">
+                    <li class = "info">GRAND TOTAL</li>        
+                </ul>
+
+                <ul id = "info-cost">
+                    <li class = "info-cost" id = "gtotal">gtotal</li>
+                </ul>
+            </div>
+
+            <input type="text" id = "promo-code" placeholder="Promo: aw223">
             <button id="apply">Apply</button>
-            <button id="checkout">CHECKOUT</button>
+            <button id="checkout">PROCEED</button>
         </div>
 
     </div>
 
+    <!-- The Modal -->
+<div id="confirm-delete" class="confirm">
+
+    <!-- Modal content -->
+    <div class="confirm-content">
+      <div class="confirm-header">
+        <span class="close2">&times;</span>
+        <h2>Confirm Delete</h2>
+      </div>
+      <div class="confirm-body">
+        <p>Are you sure you want to delete product?</p>
+        <div class = "confirm-body2">
+            
+            <button id = "yes">Yes</button>
+            <button id = "no">No</button>
+         </div> 
+      </div>
+    </div>
+  
+  </div>
     
 
     <footer>
 
         
     </footer>
+
 </body>
+
+<script src="../script/cart.js" >
+
+</script>
+
 </html>

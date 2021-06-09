@@ -381,7 +381,7 @@ span.close:hover {
 
 #first-div {
     margin:auto;
-    width: 80%;
+    width: 90%;
     margin-top: 2%;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -409,8 +409,12 @@ table{
 
 td {
     border-bottom: 1px solid #002b5c;
-    padding-right: 7em;
+    
     border-bottom: 2px solid #dddddd;
+}
+
+td:first-child{
+    padding-right: 5em;
 }
 
 th {
@@ -419,10 +423,20 @@ th {
     padding-right: 7em;
 }
 
+#delete-icon:hover {
+    cursor: pointer;
+}
+
 h4 {
     margin-bottom: 0;
     margin-block-start: 0%;
     margin-block-end: 0%;
+}
+
+span#qty-col {
+    display: inline-block;
+    margin: 0 0.4em;
+    font-size: 1.05em;
 }
 
 .order-summary-head {
@@ -459,6 +473,18 @@ ul#info-cost {
 li.info-cost {
     padding-bottom: 18%;
     padding-left: 7em;
+}
+
+li#discount {
+    visibility:hidden;
+    padding-left: 6.4em;
+    color:red;
+}
+
+li#gtotal {
+    font-size: 1.1em;
+    font-weight: 700;
+    padding-left: 7.2em;
 }
 
 input[id=promo-code] {
@@ -508,6 +534,103 @@ button:hover {
     box-shadow: 0.1em 0em 0.1em 0.1em  gold;
 }
 
+/* The Modal (background) */
+.confirm {
+    display: none;  /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .confirm-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 35%; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close2 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close2:hover,
+  .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .confirm-header {
+    padding: 2px 16px;
+    background-color: crimson;
+    color: white;
+  }
+  
+  .confirm-body {
+      padding: 0.2em 1em;
+    }
 
+    .confirm-body2 {
+        padding: 2px 16px;
+        display: flex;
+        margin-left:10%;
+        margin-bottom: 1.5em;
+      }
+    button#yes, button#no {
+        margin-left: 2%;
+        width:5em;
+        height:3em;
+        border: 0;
+        color:white;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    button#yes {
+        background-color: green;   
+    }
+
+    button#no {
+        background-color: red; 
+    }
+
+    h5 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    i {
+        font-style:none;
+    }
 
 

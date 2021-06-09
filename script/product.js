@@ -1,11 +1,10 @@
 const modal = document.getElementById("myModal");
-
-const btn = document.getElementById("add-to-cart");
-
+const addToCart = document.getElementById("add-to-cart");
 const span = document.getElementsByClassName("close")[0];
+const chkout = document.getElementById("checkout")
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+addToCart.onclick = function() {
 
 if (document.getElementsByClassName("size").textContent === undefined )
     {
@@ -13,12 +12,19 @@ if (document.getElementsByClassName("size").textContent === undefined )
     } 
 else
     {
+        const pname = document.getElementById("pname").textContent
+        const pprice = document.getElementById("pprice").textContent
+        const pcolor = document.getElementById("color-text").textContent
+        const psize = document.getElementsByClassName("size").textContent
+        const qty = document.getElementById("qty-input").value
+
+
         document.getElementById("summary-image").src = document.getElementById("main-image").src
-        document.getElementById("summary-pname").textContent = document.getElementById("pname").textContent
-        document.getElementById("summary-pprice").textContent = document.getElementById("pprice").textContent
-        document.getElementById("summary-pcolor").textContent = "Color: " + document.getElementById("color-text").textContent
-        document.getElementById("summary-psize").textContent = "Size: " + document.getElementsByClassName("size").textContent
-        document.getElementById("summary-pqty").textContent = "Qty: " +document.getElementById("qty-input").value
+        document.getElementById("summary-pname").textContent = pname
+        document.getElementById("summary-pprice").textContent = pprice
+        document.getElementById("summary-pcolor").textContent = "Color: " + pcolor
+        document.getElementById("summary-psize").textContent = "Size: " + psize
+        document.getElementById("summary-pqty").textContent = "Qty: " + qty
  
         modal.style.display = "block";
     }
@@ -29,6 +35,18 @@ span.onclick = function() {
     modal.style.display = "none";
   }
 
+//Store product summary in local storage and go to cart page
+chkout.onclick = function() {
+    localStorage.setItem("name", document.getElementById("pname").textContent)
+    localStorage.setItem("price", document.getElementById("pprice").textContent)
+    localStorage.setItem("color", document.getElementById("color-text").textContent)
+    localStorage.setItem("size", document.getElementsByClassName("size").textContent)
+    localStorage.setItem("qty", document.getElementById("qty-input").value)
+    
+    location.href = "extra/cart.html"
+}
+
+//increments quantity
 function incrementValue()
 {
     var value = document.getElementById("qty-input").value;
@@ -39,6 +57,7 @@ function incrementValue()
     
 }
 
+//decrements quantity
 function decrementValue()
 {
     var value = document.getElementById("qty-input").value;
