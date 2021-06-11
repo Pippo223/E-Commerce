@@ -11,6 +11,7 @@ document.getElementById("name-col").innerHTML = name1
 document.getElementById("color-col").innerHTML = "Color: " + color
 document.getElementById("size-col").innerHTML = "Size: "+ size
 document.getElementById("qty-col").textContent = qty
+document.getElementById("item-number").textContent = qty + " Items"
 document.getElementById("uprice-col").innerHTML = uprice
 
 let priceNum = Number(uprice.slice(1))
@@ -48,6 +49,7 @@ function incrementValue()
     if (value <= 20)  
    { 
         document.getElementById("qty-col").textContent = value;
+        document.getElementById("item-number").textContent = value+ " items";
         qtyNum = Number(value)
         total = priceNum * qtyNum //get new total price
         gtotal = total + deliveryCost
@@ -136,4 +138,8 @@ yes.onclick = function() {
     //When the user clicks on 'No', remove product
 no.onclick = function() {
     confirm.style.display = "none"
+}
+
+    function toPayment () {
+        location.href = "payment.html"
 }

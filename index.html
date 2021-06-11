@@ -19,8 +19,8 @@
             
             <div id = "top-left">
                 <p id = "home"><a class = "top-left-links" href="">Home</a></p>
-                <p id = "about"><a class = "top-left-links" href="">About</a></p>
-                <p id = "contact"><a class = "top-left-links" href="">Contact</a></p>
+                <p id = "about"><a class = "top-left-links" href="#footer">About</a></p>
+                <p id = "contact"><a class = "top-left-links" href="#footer">Contact</a></p>
             </div>
 
             <div id = "bottom-left">
@@ -53,14 +53,15 @@
 
                 <p class = "cats"><a class = "top-left-links" href="">Sign in</a></p>
                 <p class = "cats"><a class = "top-left-links" href="">Register</a></p>
-                <p class = "cats"><a class = "top-left-links" href=""><i class="fa fa-shopping-cart"></i></a></p>
+                <p class = "cats"><a class = "top-left-links" href=""><i class="fa fa-shopping-cart"></i></a>
+                </p>
 
             </div>
 
             <div id = "bottom-right">
 
                 <input type="search" placeholder="Search Product">
-                <button>Search</button>
+                <button id=srch>Search</button>
             
             </div>
 
@@ -146,17 +147,17 @@
       </div>
       <hr>
       <div id="total-in-bag">
-         Items in bag = 1
+        
      </div>
         <hr>
       <div id="sub-total-div">
         <p>CART SUBTOTAL:</p>  
-        <p id="sub-total">$180.00</p>
+        <p id="sub-total"></p>
       </div>
       <hr>
       <div>
           <button id="checkout">CHECKOUT</button>
-          <button id="continue-shopping">CONTINUE SHOPPING</button>
+          <button id="continue-shopping" onclick="mainProductPage()">CONTINUE SHOPPING</button>
       </div>
 
 
@@ -169,9 +170,9 @@
 
 </div>
 
-<footer>
-
-        
+<footer id=footer>
+    PHILIP OWUSU ASARE <br> philip.asare@amalitech.org <br>+233247731807
+    
 </footer>
 
 

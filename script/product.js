@@ -27,6 +27,9 @@ else
         document.getElementById("summary-pqty").textContent = "Qty: " + qty
  
         modal.style.display = "block";
+
+        document.getElementById("sub-total").innerHTML = "$"+Number(pprice.slice(1)) * Number(qty);
+        document.getElementById("total-in-bag").innerHTML = qty + " items in cart";
     }
 }
 
@@ -119,3 +122,6 @@ function getSize45 () {
 }
 
 
+function mainProductPage() {
+    location.href = "extra/products.html"
+}

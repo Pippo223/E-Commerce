@@ -17,16 +17,16 @@ body {
 
 #left-header{
     /* border:1px solid blue; */
-    padding-left: 5%;
+    padding-left: 1em;
 }
 
 #top-left {
     display: flex;
-    margin-bottom: 2%;
+    margin-bottom: 0.8em;
 }
 
 #about, #contact{
-    padding-left: 22%;
+    padding-left: 6em;
 }
 
 .top-left-links {
@@ -49,7 +49,7 @@ body {
  
 .cats {
     font-size: 1.125rem;
-     margin-left: 10%;
+     margin-left: 3em;
  }
 
 #top-right {
@@ -57,8 +57,8 @@ body {
 }
 
 input[type=search] {
-    margin-left: 10%;
-    width: 35%;
+    margin-left: 3em;
+    width: 15em;
     margin-top: 2%;
 }
 
@@ -385,7 +385,6 @@ span.close:hover {
     margin-top: 2%;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    height: 500px;
 }
 /* 
 #items-summary {
@@ -516,6 +515,10 @@ button[id=checkout] {
     border:0;
 }
 
+button[class=button] {
+    margin-left: 0.6em;
+}
+
 button[id=continue-shopping] {
     width:90%;
     margin:auto;
@@ -633,4 +636,66 @@ button:hover {
         font-style:none;
     }
 
+    .payment {
+        width:50%;
+        margin:auto;
+        font-size: 2em;
+    }
 
+    footer {
+        text-align: center;
+        font-size: 1.5em;
+        color:#002b5c;
+        padding-top: 3em;
+        font-weight: 700;
+    }
+
+    #topmost-products {
+        text-align: center;
+        color: red;
+        font-size: 1.2em;
+    }
+
+    @media (max-width:1147px ) {
+        #top-right, input[type=search],button[id=srch] {
+            display: none;
+        }
+
+    }
+
+    @media (max-width:755px ) {
+        #bottom-center {
+            display: block;
+            margin-left:.5%;
+        }
+
+        #total-in-bag {
+            margin-top:10em;
+        }
+
+        #myModal {
+            font-size: 0.7em;
+        }
+
+        .head-text {
+            font-size: 0.8em;
+        }
+
+        #first-div {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width:635px ) {
+
+    button[id=checkout], input[id=promo-code]  {
+        width:40%;
+        display:block;
+    
+    }
+
+    button[id=apply] {
+        margin-left: 20%;
+    }
+
+}

@@ -20,8 +20,8 @@
             
             <div id = "top-left">
                 <p id = "home"><a class = "top-left-links" href="">Home</a></p>
-                <p id = "about"><a class = "top-left-links" href="">About</a></p>
-                <p id = "contact"><a class = "top-left-links" href="">Contact</a></p>
+                <p id = "about"><a class = "top-left-links" href="#footer">About</a></p>
+                <p id = "contact"><a class = "top-left-links" href="#footer">Contact</a></p>
             </div>
 
             <div id = "bottom-left">
@@ -61,7 +61,7 @@
             <div id = "bottom-right">
 
                 <input type="search" placeholder="Search Product">
-                <button>Search</button>
+                <button id=srch>Search</button>
             
             </div>
 
@@ -111,7 +111,7 @@
         <div id = "order-summary">
             <div class = "order-summary-head">
                <h3 id = "my-cart-header"> Order Summary</h3>
-               <p id = "item-number">1 items</p>
+               <p id = "item-number"></p>
             </div>
 
             <div class = "order-summary-body">
@@ -144,7 +144,7 @@
 
             <input type="text" id = "promo-code" placeholder="Promo: aw223">
             <button id="apply">Apply</button>
-            <button id="checkout">PROCEED</button>
+            <button class=button id="checkout" onclick="toPayment()">PROCEED</button>
         </div>
 
     </div>
@@ -171,8 +171,8 @@
   </div>
     
 
-    <footer>
-
+    <footer id=footer>
+        PHILIP OWUSU ASARE <br> philip.asare@amalitech.org <br>+233247731807
         
     </footer>
 
